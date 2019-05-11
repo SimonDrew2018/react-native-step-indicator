@@ -387,6 +387,7 @@ export default class StepIndicator extends Component {
     if (position > stepCount - 1) {
       position = stepCount - 1
     }
+if (stepCount > 1) {
     const animateToPosition =
       (this.state.progressBarSize / (stepCount - 1)) * position
     this.sizeAnim.setValue(this.state.customStyles.stepIndicatorSize)
@@ -409,6 +410,7 @@ export default class StepIndicator extends Component {
         })
       ])
     ]).start()
+}
   }
 }
 
